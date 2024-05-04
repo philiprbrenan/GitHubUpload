@@ -1,8 +1,8 @@
-# Test 2024-05-05 at 00:08:52
+# Test 2024-05-05 at 00:10:01
 
 name: Test
 
-run-name: 2024-05-05 at 00:08:52
+run-name: 2024-05-05 at 00:10:01
 
 on:
   push:
@@ -42,6 +42,6 @@ jobs:
         cat aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt > aaa.txt
         cat aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt > aaa.txt
         zip aaa aaa.txt
-        tree
+        tree -h
         perl -Idtt/lib -Igh/lib -M"GitHub::Crud" -e"GitHub::Crud::writeBinaryFileFromFileInCurrentRun('aaa.txt', 'aaa.txt')"
         perl -Idtt/lib -Igh/lib -M"GitHub::Crud" -e"GitHub::Crud::writeBinaryFileFromFileInCurrentRun('aaa.zip', 'aaa.zip')"
