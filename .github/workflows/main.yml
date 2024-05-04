@@ -1,8 +1,8 @@
-# Test 2024-05-05 at 00:16:11
+# Test 2024-05-05 at 00:17:22
 
 name: Test
 
-run-name: 2024-05-05 at 00:16:11
+run-name: 2024-05-05 at 00:17:22
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        perl -e"use v5.34; for(1..9999999) {say}" > aaa.txt
+        perl -e"use v5.34; for(1..999999) {say}" > aaa.txt
         zip aaa aaa.txt
         tree -h
         perl -Idtt/lib -Igh/lib -M"GitHub::Crud" -e"GitHub::Crud::writeBinaryFileFromFileInCurrentRun('aaa.txt', 'aaa.txt')"
