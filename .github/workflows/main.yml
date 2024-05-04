@@ -1,8 +1,8 @@
-# Test 2024-05-04 at 23:26:17
+# Test 2024-05-04 at 23:31:49
 
 name: Test
 
-run-name: 2024-05-04 at 23:26:17
+run-name: 2024-05-04 at 23:31:49
 
 on:
   push:
@@ -33,9 +33,11 @@ jobs:
     - name: Cpan
       run:  sudo cpan install -T Data::Dump  Digest::SHA1
 
-    - name: Upload images
+    - name: Upload file
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         echo "AAAA" > aaa.txt
+        zip aaa aaa.txt
         perl -Idtt/lib -Igh/lib -M"GitHub::Crud" -e"GitHub::Crud::writeBinaryFileFromFileInCurrentRun('aaa.txt', 'aaa.txt')"
+        perl -Idtt/lib -Igh/lib -M"GitHub::Crud" -e"GitHub::Crud::writeBinaryFileFromFileInCurrentRun('aaa.zip', 'aaa.zip')"
