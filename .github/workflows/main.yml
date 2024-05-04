@@ -1,8 +1,8 @@
-# Test 2024-05-05 at 00:58:16
+# Test 2024-05-05 at 00:58:54
 
 name: Test
 
-run-name: 2024-05-05 at 00:58:16
+run-name: 2024-05-05 at 00:58:54
 
 on:
   push:
@@ -21,6 +21,7 @@ jobs:
         ref: 'main'
 
     - uses: actions/checkout@v4
+      with:
         clean: false
     - run: |
         perl -e"use v5.34; for(1..9999999) {say}" > aaa.txt
