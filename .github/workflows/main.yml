@@ -1,8 +1,8 @@
-# Test 2024-05-04  at 23:31:49
+# Test 2024-05-05 at 00:08:52
 
 name: Test
 
-run-name: 2024-05-04 at 23:31:49
+run-name: 2024-05-05 at 00:08:52
 
 on:
   push:
@@ -38,6 +38,10 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         echo "AAAA" > aaa.txt
+        cat aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt > aaa.txt
+        cat aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt > aaa.txt
+        cat aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt aaa.txt > aaa.txt
         zip aaa aaa.txt
+        tree
         perl -Idtt/lib -Igh/lib -M"GitHub::Crud" -e"GitHub::Crud::writeBinaryFileFromFileInCurrentRun('aaa.txt', 'aaa.txt')"
         perl -Idtt/lib -Igh/lib -M"GitHub::Crud" -e"GitHub::Crud::writeBinaryFileFromFileInCurrentRun('aaa.zip', 'aaa.zip')"
