@@ -1,8 +1,8 @@
-# Test 2024-05-05 at 01:11:27
+# Test 2024-05-05 at 01:12:54
 
 name: Test
 
-run-name: 2024-05-05 at 01:11:27
+run-name: 2024-05-05 at 01:12:54
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
     - run: |
         perl -e"use v5.34; for(1..9999999) {say}" > aaa.txt
         zip aaa aaa.txt
-        ls -la *
+        ls -lah *
         git config user.name "aaa"
         git config user.email "aaa@aaa.com"
         git add aaa.zip
