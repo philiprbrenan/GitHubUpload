@@ -23,6 +23,7 @@ jobs:
         ls -lah *
         git config user.name "aaa"
         git config user.email "aaa@aaa.com"
+        git checkout -b new
         git add aaa.zip aaa.txt
         git commit -m "Upload zip"
         git push --atomic --force origin +new
