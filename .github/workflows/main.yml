@@ -25,4 +25,4 @@ jobs:
         git config user.email "aaa@aaa.com"
         git add aaa.zip
         git commit -m "Upload zip"
-        git push
+        git push --atomic --force
