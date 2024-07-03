@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: |
-        perl -e"use v5.34; for(1..9999999) {say}" > aaa.txt
+        perl -e"use v5.34; for(1..9999999*2) {say}" > aaa.txt
         zip aaa aaa.txt
         ls -lah *
         git config user.name "aaa"
